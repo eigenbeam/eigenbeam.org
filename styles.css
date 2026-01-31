@@ -1,0 +1,110 @@
+/* Additional custom styles */
+
+/* Content width constraints */
+.content {
+  max-width: 650px;
+}
+
+/* Allow figures to extend wider */
+.quarto-figure-center {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Remove section numbers from headings */
+.header-section-number {
+  display: none;
+}
+
+/* Code block refinements */
+.sourceCode {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Observable/JS output styling */
+.observablehq {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.observablehq input,
+.observablehq select,
+.observablehq button {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+/* Math display */
+.math.display {
+  margin: 1.5em 0;
+  overflow-x: auto;
+}
+
+/* Inline math spacing */
+.math.inline {
+  padding: 0 0.1em;
+}
+
+/* Figure captions - centered */
+.figure-caption {
+  text-align: center;
+}
+
+/* Post metadata */
+.quarto-title-meta {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 0.9em;
+  color: #555555;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2em 0;
+}
+
+/* Emphasis and strong */
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+/* Callout boxes (if used) */
+.callout {
+  font-family: "Source Sans 3", sans-serif;
+  border-left-width: 3px;
+}
+
+/* Print styles */
+@media print {
+  body {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+  
+  .navbar, .nav-footer, .sidebar {
+    display: none;
+  }
+  
+  a {
+    color: #111111;
+    text-decoration: none;
+  }
+  
+  pre {
+    border: 1px solid #cccccc;
+  }
+}

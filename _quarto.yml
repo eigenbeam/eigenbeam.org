@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Your Name"
+  description: "Computational physics notes and explorations"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+  page-footer:
+    center: "© 2025 Your Name"
+
+format:
+  html:
+    theme:
+      light: custom.scss
+    css: styles.css
+    toc: true
+    toc-depth: 2
+    toc-location: right
+    code-fold: false
+    code-tools: false
+    highlight-style: github
+    fontsize: 18px
+    linestretch: 1.6
+    mainfont: "Source Serif 4"
+    monofont: "JetBrains Mono"
+
+execute:
+  freeze: auto

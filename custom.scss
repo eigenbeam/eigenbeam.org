@@ -1,0 +1,169 @@
+/*-- scss:defaults --*/
+
+// Colors
+$body-bg: #fffff8;
+$body-color: #111111;
+$link-color: #a00000;
+$code-bg: #f7f7f7;
+$code-border: #e0e0e0;
+$text-muted: #555555;
+
+// Typography
+$font-family-sans-serif: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+
+/*-- scss:rules --*/
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+body {
+  font-family: $font-family-serif;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  color: $body-color;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: darken($link-color, 15%);
+}
+
+// Code
+code {
+  font-family: $font-family-monospace;
+  font-size: 0.85em;
+  background-color: $code-bg;
+  padding: 0.15em 0.35em;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: $code-bg;
+  border: 1px solid $code-border;
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+// Figures
+.quarto-figure {
+  margin: 2em 0;
+}
+
+figcaption {
+  font-family: $font-family-sans-serif;
+  font-size: 0.9em;
+  color: $text-muted;
+  margin-top: 0.5em;
+}
+
+// Sidenotes and margin notes
+.column-margin {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85em;
+  color: $text-muted;
+}
+
+// Block quotes
+blockquote {
+  border-left: 3px solid $code-border;
+  padding-left: 1em;
+  margin-left: 0;
+  color: $text-muted;
+  font-style: italic;
+}
+
+// Tables
+table {
+  font-family: $font-family-sans-serif;
+  font-size: 0.9em;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+}
+
+th, td {
+  padding: 0.5em 1em;
+  border-bottom: 1px solid $code-border;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid $body-color;
+}
+
+// Navbar
+.navbar {
+  font-family: $font-family-sans-serif;
+  background-color: $body-bg !important;
+  border-bottom: 1px solid $code-border;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+// Footer
+.nav-footer {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85em;
+  color: $text-muted;
+  border-top: 1px solid $code-border;
+}
+
+// TOC
+.sidebar nav[role="doc-toc"] {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85em;
+}
+
+// Post listing
+.quarto-listing {
+  font-family: $font-family-sans-serif;
+}
+
+.listing-title {
+  font-weight: 600;
+}
+
+.listing-description {
+  color: $text-muted;
+}

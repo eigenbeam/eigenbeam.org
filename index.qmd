@@ -1,0 +1,12 @@
+---
+title: "Your Name"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  fields: [date, title, description]
+  date-format: "YYYY-MM-DD"
+page-layout: full
+---
+
+Notes on computational physics, numerical methods, and learning in public.

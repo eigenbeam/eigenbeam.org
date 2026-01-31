@@ -1,0 +1,25 @@
+---
+title: "Starting a computational physics journey"
+date: 2025-02-01
+description: "Why I'm studying physics and computation, and what I plan to build."
+---
+
+After 34 years as a software engineer, I'm returning to physics. Not because my career requires it—though I hope it will benefit—but because I want to understand how the world works at a level I never have before.
+
+This blog will document what I learn. The format is simple: study the physics, implement it computationally, write about both. The writing forces clarity. The code forces precision. Together, they should produce understanding.
+
+## The plan
+
+I'm working through a sequence of physics texts: Kleppner and Kolenkow for mechanics, Purcell and Morin for electromagnetism, Schroeder for thermal physics, and so on. Alongside these, I'm studying numerical methods—how to actually solve the equations that physics produces.
+
+Each major topic gets a computational project. Mechanics leads to n-body simulations and orbital mechanics. Waves lead to solving the wave equation numerically. Statistical mechanics leads to Monte Carlo methods. Quantum mechanics leads to solving the Schrödinger equation.
+
+## Why write publicly?
+
+Three reasons. First, writing clarifies thinking. If I can't explain something simply, I don't understand it. Second, it creates accountability. A public commitment is harder to abandon. Third, it might help someone else on a similar path.
+
+## What's next
+
+I'm starting with mechanics and the Lorenz attractor—a simple system of ordinary differential equations that exhibits chaos. It's a good first project: approachable numerics, beautiful visualizations, and a famous result.
+
+More soon.

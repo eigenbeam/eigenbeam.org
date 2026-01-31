@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+I'm a software engineer with 34 years of experience, currently studying computational physics.
+
+This blog documents my journey through physics, numerical methods, and scientific computing. I'm working through the fundamentals—mechanics, electromagnetism, waves, thermal physics, quantum mechanics—while building computational projects that bring the physics to life.
+
+The goal is to understand deeply, implement carefully, and explain clearly.
+
+You can find my code on [GitHub](https://github.com/yourusername).

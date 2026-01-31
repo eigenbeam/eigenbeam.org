@@ -1,0 +1,95 @@
+# Matplotlib style for computational physics blog
+# Usage: plt.style.use('computational_physics.mplstyle')
+
+# Figure
+figure.figsize: 8, 5
+figure.dpi: 150
+figure.facecolor: fffff8
+figure.edgecolor: fffff8
+
+# Axes
+axes.facecolor: fffff8
+axes.edgecolor: 111111
+axes.linewidth: 0.8
+axes.grid: False
+axes.spines.top: False
+axes.spines.right: False
+axes.labelcolor: 111111
+axes.labelsize: 12
+axes.labelweight: normal
+axes.titlesize: 14
+axes.titleweight: normal
+axes.titlepad: 12
+
+# Ticks
+xtick.color: 111111
+ytick.color: 111111
+xtick.labelsize: 10
+ytick.labelsize: 10
+xtick.direction: out
+ytick.direction: out
+xtick.major.width: 0.8
+ytick.major.width: 0.8
+xtick.major.size: 4
+ytick.major.size: 4
+xtick.minor.visible: False
+ytick.minor.visible: False
+
+# Grid (when used)
+grid.color: e0e0e0
+grid.linewidth: 0.5
+grid.alpha: 0.7
+grid.linestyle: -
+
+# Lines
+lines.linewidth: 2
+lines.markersize: 6
+lines.markeredgewidth: 0
+
+# Color cycle - colorblind friendly
+axes.prop_cycle: cycler('color', ['4269d0', 'ff725c', '6cc5b0', '9d6bb3', '888888', 'e3ba22', 'bd6b08', 'ad8bc9'])
+
+# Legend
+legend.frameon: False
+legend.fontsize: 10
+legend.loc: best
+legend.borderpad: 0.5
+legend.labelspacing: 0.5
+
+# Font
+font.family: sans-serif
+font.sans-serif: Source Sans 3, DejaVu Sans, Helvetica, Arial, sans-serif
+font.size: 11
+
+# Text
+text.color: 111111
+
+# Scatter
+scatter.marker: o
+
+# Errorbar
+errorbar.capsize: 3
+
+# Saving
+savefig.dpi: 150
+savefig.facecolor: fffff8
+savefig.edgecolor: fffff8
+savefig.bbox: tight
+savefig.pad_inches: 0.1
+savefig.format: png
+
+# Patches (for bar charts, etc.)
+patch.linewidth: 0.5
+patch.edgecolor: 111111
+
+# Histogram
+hist.bins: auto
+
+# Contour
+contour.linewidth: 1.5
+
+# Image
+image.cmap: viridis
+
+# 3D (if used)
+axes3d.grid: True
