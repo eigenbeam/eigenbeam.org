@@ -1,72 +1,40 @@
-# Blog Starter
+# Eigenbeam
 
-A minimal Quarto blog configured for computational physics writing.
+A computational physics blog built with Quarto, hosted on Cloudflare Pages.
 
-## Setup
+**Live site:** [eigenbeam.org](https://eigenbeam.org)
 
-### 1. Install Quarto
+## Local development
 
-**macOS:**
-```bash
-brew install quarto
-```
+### Prerequisites
 
-**Linux:**
-Download from [quarto.org](https://quarto.org/docs/get-started/)
+- [Quarto](https://quarto.org): `brew install quarto`
+- [uv](https://github.com/astral-sh/uv): `brew install uv`
 
-### 2. Install uv (Python package manager)
-
-```bash
-brew install uv
-```
-
-### 3. Install Python dependencies
-
-In your blog directory, create a virtual environment and install dependencies:
+### Setup
 
 ```bash
 uv venv
 uv pip install jupyter pyyaml numpy matplotlib
 ```
 
-### 4. Install fonts (optional but recommended)
-
-The theme uses Source Serif 4, Source Sans 3, and JetBrains Mono. These are loaded from Google Fonts, so they'll work without installation, but installing them locally improves preview speed.
-
-**macOS:**
-```bash
-brew install --cask font-source-serif-4 font-source-sans-3 font-jetbrains-mono
-```
-
-### 5. Copy these files to your blog directory
-
-```
-your-blog/
-├── _quarto.yml
-├── custom.scss
-├── styles.css
-├── computational_physics.mplstyle
-├── index.qmd
-├── about.qmd
-└── posts/
-    └── (your posts here)
-```
-
-### 6. Preview locally
+### Preview
 
 ```bash
 uv run quarto preview
 ```
 
-This opens a browser with live reload.
+Opens a browser with live reload at `localhost:4200`.
 
-### 7. Publish to GitHub Pages
+## Deployment
 
-```bash
-uv run quarto publish gh-pages
+Push to `main` and Cloudflare Pages builds automatically. The build command is:
+
+```
+curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && dpkg -x quarto-linux-amd64.deb /tmp/quarto && export PATH=/tmp/quarto/opt/quarto/bin:$PATH && pip install uv && uv venv && uv pip install jupyter pyyaml numpy matplotlib && uv run quarto render
 ```
 
-This builds the site and pushes to the `gh-pages` branch.
+Output directory: `docs`
 
 ## Writing posts
 
@@ -88,34 +56,11 @@ description: "One sentence summary."
 ---
 ```
 
-Then write in Markdown. Use `$...$` for inline math, `$$...$$` for display math.
-
-## Including code
-
-Python code that executes:
-
-````markdown
-```{python}
-import numpy as np
-print(np.pi)
-```
-````
-
-Code that doesn't execute (just display):
-
-````markdown
-```python
-# This is just shown, not run
-x = 1
-```
-````
+Use `$...$` for inline math, `$$...$$` for display math.
 
 ## Including figures
 
-From Python:
-
-````markdown
-```{python}
+```python
 #| label: fig-example
 #| fig-cap: "Caption goes here."
 
@@ -125,27 +70,8 @@ plt.style.use('computational_physics.mplstyle')
 # Your plot...
 plt.show()
 ```
-````
-
-## Interactive visualizations
-
-Use Observable JS:
-
-````markdown
-```{ojs}
-viewof x = Inputs.range([0, 10], {value: 5, label: "x"})
-
-Plot.plot({
-  marks: [
-    Plot.line(data, {x: "time", y: "value"})
-  ]
-})
-```
-````
 
 ## Sidenotes
-
-Use the margin column:
 
 ```markdown
 Some text in the main column.
@@ -157,26 +83,7 @@ This appears in the margin as a sidenote.
 
 ## Customization
 
-- Edit `_quarto.yml` for site-wide settings
-- Edit `custom.scss` for colors and typography
-- Edit `styles.css` for layout adjustments
-- Edit `computational_physics.mplstyle` for matplotlib defaults
-
-## File structure after setup
-
-```
-your-blog/
-├── _quarto.yml           # Site configuration
-├── custom.scss           # Theme (colors, fonts)
-├── styles.css            # Additional styles
-├── computational_physics.mplstyle  # Matplotlib style
-├── index.qmd             # Home page
-├── about.qmd             # About page
-├── posts/                # Your posts
-│   ├── 01-first-post/
-│   │   └── index.qmd
-│   └── 02-second-post/
-│       └── index.qmd
-├── .venv/                # Python environment (add to .gitignore)
-└── docs/                 # Generated site (don't edit)
-```
+- `_quarto.yml` — site-wide settings
+- `custom.scss` — colors and typography
+- `styles.css` — layout adjustments
+- `computational_physics.mplstyle` — matplotlib defaults
