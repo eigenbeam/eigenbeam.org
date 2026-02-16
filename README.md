@@ -26,15 +26,26 @@ uv run quarto preview
 
 Opens a browser with live reload at `localhost:4200`.
 
-## Deployment
+## Cloudflare Pages setup
 
-Push to `main` and Cloudflare Pages builds automatically. The build command is:
+Push to `main` and Cloudflare Pages builds automatically.
 
-```
-curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && dpkg -x quarto-linux-amd64.deb /tmp/quarto && export PATH=/tmp/quarto/opt/quarto/bin:$PATH && pip install uv && uv venv && uv pip install jupyter pyyaml numpy matplotlib && uv run quarto render
-```
+### Build configuration
 
-Output directory: `docs`
+- **Build command:**
+  ```
+  curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb && dpkg -x quarto-linux-amd64.deb /tmp/quarto && export PATH=/tmp/quarto/opt/quarto/bin:$PATH && pip install uv && uv venv && uv pip install jupyter pyyaml numpy matplotlib && . .venv/bin/activate && quarto render
+  ```
+- **Build output directory:** `docs`
+- **Root directory:** (empty)
+
+### Important notes
+
+- Cloudflare's build environment uses `/bin/sh`, not bash. Use `. .venv/bin/activate` (not `source`).
+- The venv must be activated before `quarto render` so Quarto can find Jupyter for executing notebooks.
+- Quarto is not available in the Cloudflare build environment — it's installed from the `.deb` package at build time.
+- Quarto logs to stderr, which Cloudflare hides by default. Add `2>&1` to the render command when debugging build issues.
+- The `render` field in `_quarto.yml` must include positive glob patterns (e.g. `"*.qmd"`), not just exclusions. An exclusion-only list renders nothing.
 
 ## Writing posts
 
