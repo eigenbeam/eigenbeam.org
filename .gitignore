@@ -7,3 +7,5 @@ __pycache__/
 .DS_Store
 .playwright-mcp/
 **/*.quarto_ipynb
+
+/.quarto/
