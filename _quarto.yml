@@ -3,8 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "Your Name"
-  description: "Computational physics notes and explorations"
+  title: "Kevin Beam"
+  description: "Computational physics explorations"
   navbar:
     left:
       - href: index.qmd
@@ -12,7 +12,7 @@ website:
       - href: about.qmd
         text: About
   page-footer:
-    center: "© 2025 Your Name"
+    center: "© 2026 Kevin W. Beam"
 
 format:
   html:
