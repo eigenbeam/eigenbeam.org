@@ -1,5 +1,5 @@
 ---
-title: "Your Name"
+title: "Eigenbeam"
 listing:
   contents: posts
   sort: "date desc"
@@ -9,4 +9,4 @@ listing:
 page-layout: full
 ---
 
-Notes on computational physics, numerical methods, and learning in public.
+Notes and explorations in computational physics, mathematics, and scientific computing

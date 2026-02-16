@@ -3,22 +3,22 @@ project:
   output-dir: docs
 
 website:
-  title: "Kevin Beam"
-  description: "Computational physics explorations"
+  title: "Eigenbeam"
+  description: "Explorations in Computational Physics"
   navbar:
+    background: "#34495e"
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
   page-footer:
-    center: "© 2026 Kevin W. Beam"
+    center: "© 2026 Eigenbeam"
 
 format:
   html:
     theme:
       light: custom.scss
-    css: styles.css
     toc: true
     toc-depth: 2
     toc-location: right

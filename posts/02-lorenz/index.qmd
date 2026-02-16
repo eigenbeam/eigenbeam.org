@@ -18,11 +18,9 @@ $$
 \end{aligned}
 $$
 
-Three variables, three parameters. The classic chaotic behavior appears with $\sigma = 10$, $\rho = 28$, and $\beta = 8/3$.
+Three variables, three parameters. The classic chaotic behavior appears with $\sigma = 10$, $\rho = 28$[^rayleigh], and $\beta = 8/3$.
 
-::: {.column-margin}
-Lorenz was using $\rho = 28$ because it represents a Rayleigh number—a ratio of buoyancy to viscous forces in the fluid.
-:::
+[^rayleigh]: Lorenz was using $\rho = 28$ because it represents a Rayleigh number—a ratio of buoyancy to viscous forces in the fluid.
 
 ## A simple integrator
 
@@ -80,8 +78,8 @@ initial = np.array([1.0, 1.0, 1.0])
 trajectory = integrate(lorenz, initial, dt, steps)
 
 # Plot
-fig = plt.figure(figsize=(8, 6), facecolor='#fffff8')
-ax = fig.add_subplot(111, projection='3d', facecolor='#fffff8')
+fig = plt.figure(figsize=(8, 6), facecolor='#eef1ed')
+ax = fig.add_subplot(111, projection='3d', facecolor='#eef1ed')
 
 ax.plot(trajectory[:, 0], trajectory[:, 1], trajectory[:, 2], 
         linewidth=0.5, color='#4269d0', alpha=0.8)
@@ -126,7 +124,7 @@ separation = np.linalg.norm(traj_1 - traj_2, axis=1)
 time = np.arange(steps + 1) * dt
 
 # Plot
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4), facecolor='#fffff8')
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 4), facecolor='#eef1ed')
 
 # X coordinate over time
 ax1.plot(time, traj_1[:, 0], color='#4269d0', linewidth=0.8, label='Trajectory 1')
@@ -137,7 +135,7 @@ ax1.set_xlim(0, 50)
 ax1.legend(frameon=False)
 ax1.spines['top'].set_visible(False)
 ax1.spines['right'].set_visible(False)
-ax1.set_facecolor('#fffff8')
+ax1.set_facecolor('#eef1ed')
 
 # Separation over time (log scale)
 ax2.semilogy(time, separation, color='#111111', linewidth=1)
@@ -147,7 +145,7 @@ ax2.set_ylabel('Separation (log scale)')
 ax2.set_xlim(0, 50)
 ax2.spines['top'].set_visible(False)
 ax2.spines['right'].set_visible(False)
-ax2.set_facecolor('#fffff8')
+ax2.set_facecolor('#eef1ed')
 
 fig.tight_layout()
 plt.show()

@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-I'm a software engineer and this blog documents my explorations in computational physics, mathematics, and scientific computing. For fun, I'm working through the fundamentals—classical mechanics, electromagnetism, waves, thermal physics, quantum mechanics—while building computational projects that bring the physics to life.
+I'm Kevin Beam, a software engineer. This blog documents my explorations in computational physics, mathematics, and scientific computing. For fun, I'm working through the fundamentals—classical mechanics, electromagnetism, waves, thermal physics, quantum mechanics—while building computational projects that bring the physics to life.
 
 The goal is to understand deeply, implement carefully, and explain clearly.
 
