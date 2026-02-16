@@ -4,22 +4,18 @@ date: 2025-02-01
 description: "Why I'm studying physics and computation, and what I plan to build."
 ---
 
-After 34 years as a software engineer, I'm returning to physics. Not because my career requires it—though I hope it will benefit—but because I want to understand how the world works at a level I never have before.
+After *many* years as a software engineer, I'm returning to physics. Not because my career requires it—though I hope it will benefit—but because I want to understand how the world works, and I love being able to compute things. It's one way to bring the theory alive.
 
-This blog will document what I learn. The format is simple: study the physics, implement it computationally, write about both. The writing forces clarity. The code forces precision. Together, they should produce understanding.
+In this blog I'll write about what I learn. The format is simple: study the physics, implement it computationally, write about both. The writing encourages clarity. The code allows me to test my understanding. More importantly, it allows me to *play* with the physics. Along the way, I hope it does something to convey the beauty we find in the universe.
 
 ## The plan
 
-I'm working through a sequence of physics texts: Kleppner and Kolenkow for mechanics, Purcell and Morin for electromagnetism, Schroeder for thermal physics, and so on. Alongside these, I'm studying numerical methods—how to actually solve the equations that physics produces.
+I've started working through some well-known physics texts. I've cracked open John R. Taylor's Classical Mechanics. After that I hope to work through Purcell and Morin for electromagnetism, Schroeder for thermal physics, and so on. As I write code I'll also dive into mathematics and numerical methods, but not by going through a text systematically. I'll dive into the topics that I need, when I need them.
 
-Each major topic gets a computational project. Mechanics leads to n-body simulations and orbital mechanics. Waves lead to solving the wave equation numerically. Statistical mechanics leads to Monte Carlo methods. Quantum mechanics leads to solving the Schrödinger equation.
+I'll be designing computational projects as I work through the texts. Of course, Classical Mechanics leads to all kinds of interesting things like n-body simulations, orbital mechanics, and chaos. We'll be solving the wave equation numerically. Statistical mechanics leads to Monte Carlo methods. Quantum mechanics leads to solving the Schrödinger equation.
 
-## Why write publicly?
+## Join me
 
-Three reasons. First, writing clarifies thinking. If I can't explain something simply, I don't understand it. Second, it creates accountability. A public commitment is harder to abandon. Third, it might help someone else on a similar path.
-
-## What's next
-
-I'm starting with mechanics and the Lorenz attractor—a simple system of ordinary differential equations that exhibits chaos. It's a good first project: approachable numerics, beautiful visualizations, and a famous result.
+I hope you join me in these explorations, and together we can explore some of the most beautiful and awe-inspiring things that humans have been able to understand about the universe.
 
 More soon.
